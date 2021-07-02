@@ -139,3 +139,66 @@ console.log("213", message213);
 const [name4, age4] = myProfile21;
 const message214 = `名前は${name4}です。年齢は${age4}歳です`;
 console.log("214", message214);
+
+/**
+ * --------------------------------
+ * ２２デフォルト値
+ *  * --------------------------------
+ */
+
+const sayHello = (name) => console.log(`こんにちわ${name}`);
+sayHello();
+sayHello("Mary");
+
+// undefinedとならないようにnameに初期値をいれた
+const sayHello2 = (name = "guest") => console.log(`こんにちわ${name}`);
+sayHello2();
+sayHello2("Nancy");
+
+/**
+ * --------------------------------
+ * ２３スプレッド構文
+ *  * --------------------------------
+ */
+
+// スプレッド構文を用いた配列の展開
+const arr1 = [1, 2];
+console.log(arr1);
+console.log(...arr1);
+
+const arr2 = [3, 4];
+const sumFunc = (num1, num2) => console.log(num1 + num2);
+sumFunc(arr2[0], arr2[1]);
+sumFunc(...arr2);
+
+const arr3 = [1, 2, 3];
+sumFunc(...arr3);
+
+const arr4 = [10];
+sumFunc(...arr4);
+
+// 要素をまとめる
+console.log("要素をまとめる");
+const arr5 = [1, 2, 3, 4, 5];
+const [num1, num2, ...arr6] = arr5;
+console.log(num1);
+console.log(num2);
+console.log(arr6);
+
+// 配列のコピー、結合
+
+const arr7 = [1, 2];
+const arr8 = [3, 4];
+
+console.log("配列のコピー、スプレッドがおすすめ");
+const arr9 = [...arr7];
+console.log(arr9);
+
+console.log("配列の結合");
+const arr10 = [...arr7, ...arr8];
+console.log(arr10);
+
+console.log("配列のコピー注意点");
+// 参照渡し
+const arr11 = arr8;
+console.log(arr11);

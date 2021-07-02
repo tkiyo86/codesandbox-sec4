@@ -60,18 +60,18 @@ console.log(val5);
  * --------------------------------
  */
 
-const name = "taro";
-const age = 28;
+// const name = "taro";
+// const age = 28;
 
-// 私の名前は＊＊です年齢は＊＊です　と表示したい
+// // 私の名前は＊＊です年齢は＊＊です　と表示したい
 
-// 従来の表記
-const message1 = "私の名前は" + name + "年齢は" + age + "です";
-console.log(message1);
+// // 従来の表記
+// const message1 = "私の名前は" + name + "年齢は" + age + "です";
+// console.log(message1);
 
-// バッククオート　shift+@キー
-const message2 = `私の名前は${name}です。年齢は${age}です。`;
-console.log(message2);
+// // バッククオート　shift+@キー
+// const message2 = `私の名前は${name}です。年齢は${age}です。`;
+// console.log(message2);
 
 /**
  * --------------------------------
@@ -110,3 +110,32 @@ const func3 = (num1, num2) => {
   return num1 + num2;
 };
 console.log(func3(10, 5));
+
+/**
+ * --------------------------------
+ * ２１分割代入
+ * --------------------------------
+ */
+const myProfile = {
+  name: "Taro",
+  age: 25
+};
+
+const message211 = `名前は${myProfile.name}です。年齢は${myProfile.age}歳です`;
+console.log(message211);
+
+//　｛｝波かっこ＝オブジェクト
+//　別の場所でnameを宣言済だったりするとエラーがでる
+const { name, age } = myProfile;
+//const { name, age } = myProfile;
+const message212 = `名前は${name}です。年齢は${age}歳です`;
+console.log(message212);
+
+// 配列[]
+const myProfile21 = ["hanako", 27];
+const message213 = `名前は${myProfile21[0]}です。年齢は${myProfile21[1]}歳です`;
+console.log("213", message213);
+
+const [name4, age4] = myProfile21;
+const message214 = `名前は${name4}です。年齢は${age4}歳です`;
+console.log("214", message214);

@@ -53,3 +53,22 @@ const val5 = ["dog", "cat"];
 val5[0] = "bird";
 val5.push("monlkey");
 console.log(val5);
+
+/**
+ * --------------------------------
+ * １９テンプレート文字列
+ * --------------------------------
+ */
+
+const name = "taro";
+const age = 28;
+
+// 私の名前は＊＊です年齢は＊＊です　と表示したい
+
+// 従来の表記
+const message1 = "私の名前は" + name + "年齢は" + age + "です";
+console.log(message1);
+
+// バッククオート　shift+@キー
+const message2 = `私の名前は${name}です。年齢は${age}です。`;
+console.log(message2);

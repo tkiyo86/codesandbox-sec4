@@ -72,3 +72,41 @@ console.log(message1);
 // バッククオート　shift+@キー
 const message2 = `私の名前は${name}です。年齢は${age}です。`;
 console.log(message2);
+
+/**
+ * --------------------------------
+ * ２０アロー関数
+ * -------
+ */
+
+//　従来の関数
+function func1(str) {
+  // ここに処理を書く
+  return str;
+}
+console.log(func1("func1です"));
+
+//　上と同じ処理
+const func11 = function (str) {
+  // ここに処理を書く
+  return str;
+};
+console.log(func11("func11です"));
+
+// アロー関数
+// 引数はかっこなしでもOK
+const func2 = (str) => {
+  //ここに処理を書く
+  return str;
+};
+console.log(func2("func2です"));
+
+//　一行でもかける,retrunも省略できる
+const func21 = (str) => str;
+console.log(func21("func21です"));
+
+// 引数２つ
+const func3 = (num1, num2) => {
+  return num1 + num2;
+};
+console.log(func3(10, 5));

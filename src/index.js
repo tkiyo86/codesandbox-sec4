@@ -202,3 +202,49 @@ console.log("配列のコピー注意点");
 // 参照渡し
 const arr11 = arr8;
 console.log(arr11);
+
+/**
+ * 24 mapやFilter
+ */
+
+const nameArr = ["Tanaka", "Yamada", "Max"];
+
+// 従来通りFor文で記述
+console.log("For文");
+for (let index = 0; index < nameArr.length; index++) {
+  console.log(nameArr[index]);
+}
+
+//　ES6以降、For文は不要になった例
+console.log("mapを利用して新しい配列を生成する");
+const nameArr2 = nameArr.map((name) => {
+  return name;
+});
+console.log(nameArr2);
+
+console.log("mapを利用してFor文と同じことをする");
+nameArr.map((name) => console.log(name));
+
+// Filter
+console.log("Filterは条件に一致したモノだけを抽出できる");
+
+console.log("偶数のみを抽出");
+const numArr3 = [1, 2, 3, 4, 5];
+const newNumArr = numArr3.filter((num) => {
+  return num % 2 == 0;
+});
+console.log(newNumArr);
+console.log();
+
+// 配列の何番目の要素か
+console.log("For文で配列のN番目を抽出する");
+for (let index = 0; index < nameArr.length; index++) {
+  console.log(`${index}番目は${nameArr[index]}です`);
+}
+
+console.log("mapで配列のN番目を抽出する");
+nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
+
+// nameArrに”さん”をつけて表示する
+const newNameArr4 = nameArr.map((name) => {
+  if (name === "Max") {}

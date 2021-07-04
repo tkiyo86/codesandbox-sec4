@@ -247,4 +247,38 @@ nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
 
 // nameArrに”さん”をつけて表示する
 const newNameArr4 = nameArr.map((name) => {
-  if (name === "Max") {}
+  if (name === "Max") {
+    return name;
+  } else {
+    return `${name}さん`;
+  }
+});
+console.log(newNameArr4);
+
+/**
+ * 25 三項演算子
+ */
+
+console.log("--------------------");
+console.log("25,三項演算子");
+
+// ES6 での新しい機能ではないが、reactではよく使う
+// ある条件? 条件がTrueのとき: 条件がFalse
+
+//　if/else を一行で書ける
+const val1 = 1 < 0 ? `trueです` : `Falseです`;
+console.log(val1);
+
+// 数字を入力してtypeofで判定する
+const num5 = 1300;
+//console.log(num.toLocaleString());
+const formattedNum =
+  typeof num5 === `number` ? num5.toLocaleString() : `数値を入力してください`;
+console.log(formattedNum);
+
+// 関数のreturn で三項演算子を利用する
+
+const checksum = (num1, num2) => {
+  return num1 + num2 > 100 ? `100を超えています！！` : `許容範囲内です`;
+};
+console.log(checksum(50, 60));
